@@ -1,7 +1,5 @@
 # Deep Reinforcement Learning for Atari Games: Pong and Beam Rider
 
-**Team 9:** Vivek Choudhary, Nithish Kumar Bhupathi, Sai Harshini Pasupuleti, Aditya Pavan Sattenapalli
-
 This project implements and compares multiple Deep Reinforcement Learning algorithms on Atari games using Stable-Baselines3 and Gymnasium.
 
 ## Algorithms Implemented
