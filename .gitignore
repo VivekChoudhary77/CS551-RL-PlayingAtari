@@ -1,1 +1,40 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+venvrl/
+env/
+ENV/
+
+# Training outputs - TOO LARGE for Git
+logs/
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store
+.idea/
+.vscode/
+
+# Model checkpoints (very large files)
+*.pt
+*.pth
+*.h5
+
+# Video files (very large)
+*.avi
+
+
+# TensorBoard temp files
+events.out.tfevents.*
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# DO NOT Keep materials folder (contains proposal and docs) - this is not needed to be committed as it is not a code file
 /materials/

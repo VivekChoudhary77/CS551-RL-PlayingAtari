@@ -1,0 +1,100 @@
+Loading model from: models/ppo_beamrider_seed0_final.zip
+
+Evaluating on BEAMRIDER for 10 episodes...
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-0-to-step-1000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-0-to-step-1000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-0-to-step-1000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-0-to-step-1000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-2000-to-step-3000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-2000-to-step-3000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-2000-to-step-3000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-2000-to-step-3000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-4000-to-step-5000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-4000-to-step-5000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-4000-to-step-5000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-4000-to-step-5000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-6000-to-step-7000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-6000-to-step-7000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-6000-to-step-7000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-6000-to-step-7000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-8000-to-step-9000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-8000-to-step-9000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-8000-to-step-9000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-8000-to-step-9000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-10000-to-step-11000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-10000-to-step-11000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-10000-to-step-11000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-10000-to-step-11000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-12000-to-step-13000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-12000-to-step-13000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-12000-to-step-13000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-12000-to-step-13000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-14000-to-step-15000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-14000-to-step-15000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-14000-to-step-15000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-14000-to-step-15000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-16000-to-step-17000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-16000-to-step-17000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-16000-to-step-17000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-16000-to-step-17000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-18000-to-step-19000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-18000-to-step-19000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-18000-to-step-19000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-18000-to-step-19000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-20000-to-step-21000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-20000-to-step-21000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-20000-to-step-21000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-20000-to-step-21000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-22000-to-step-23000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-22000-to-step-23000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-22000-to-step-23000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-22000-to-step-23000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-24000-to-step-25000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-24000-to-step-25000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-24000-to-step-25000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-24000-to-step-25000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-26000-to-step-27000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-26000-to-step-27000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-26000-to-step-27000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-26000-to-step-27000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-28000-to-step-29000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-28000-to-step-29000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-28000-to-step-29000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_ppo_beamrider_seed0_final-step-28000-to-step-29000.mp4
+
+============================================================
+Results for ppo_beamrider_seed0_final.zip
+Game: BEAMRIDER
+Mean reward: 2024.40 +/- 676.31
+============================================================
+

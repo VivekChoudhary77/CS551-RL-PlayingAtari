@@ -1,0 +1,69 @@
+Loading model from: models/a2c_pong_seed0_final.zip
+
+Evaluating on PONG for 10 episodes...
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-0-to-step-1000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-0-to-step-1000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-0-to-step-1000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-0-to-step-1000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-2000-to-step-3000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-2000-to-step-3000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-2000-to-step-3000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-2000-to-step-3000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-4000-to-step-5000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-4000-to-step-5000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-4000-to-step-5000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-4000-to-step-5000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-6000-to-step-7000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-6000-to-step-7000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-6000-to-step-7000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-6000-to-step-7000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-8000-to-step-9000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-8000-to-step-9000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-8000-to-step-9000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-8000-to-step-9000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-10000-to-step-11000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-10000-to-step-11000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-10000-to-step-11000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-10000-to-step-11000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-12000-to-step-13000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-12000-to-step-13000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-12000-to-step-13000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-12000-to-step-13000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-14000-to-step-15000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-14000-to-step-15000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-14000-to-step-15000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-14000-to-step-15000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-16000-to-step-17000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-16000-to-step-17000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-16000-to-step-17000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-16000-to-step-17000.mp4
+
+============================================================
+Results for a2c_pong_seed0_final.zip
+Game: PONG
+Mean reward: 20.10 +/- 0.70
+============================================================
+
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-18000-to-step-19000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-18000-to-step-19000.mp4
+
+MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_a2c_pong_seed0_final-step-18000-to-step-19000.mp4
