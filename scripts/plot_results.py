@@ -12,6 +12,16 @@ import seaborn as sns
 from pathlib import Path
 from tensorboard.backend.event_processing import event_accumulator
 
+# Shared color palette for all algorithms (consistent across all plots)
+ALGORITHM_COLORS = {
+    'DQN': '#1f77b4',           # Blue
+    'QRDQN': '#d62728',          # Red
+    'A2C': '#ff7f0e',            # Orange
+    'PPO': '#2ca02c',            # Green
+    'RecurrentPPO': '#9467bd',   # Purple
+    'RECURRENTPPO': '#9467bd'    # Purple (uppercase variant for consistency)
+}
+
 
 def load_tensorboard_data(log_dir, tag='rollout/ep_rew_mean'):
     """
@@ -59,21 +69,11 @@ def plot_learning_curves(log_dirs, labels, game, output_file='results/learning_c
     plt.figure(figsize=(12, 6))
     sns.set_style("whitegrid")
     
-    # Color palette for 5 algorithms: DQN, QRDQN, A2C, PPO, RecurrentPPO
-    # Blue, Red, Orange, Green, Purple
-    color_map = {
-        'DQN': '#1f77b4',      # Blue
-        'QRDQN': '#d62728',     # Red
-        'A2C': '#ff7f0e',       # Orange
-        'PPO': '#2ca02c',       # Green
-        'RecurrentPPO': '#9467bd'  # Purple
-    } 
-    
     for log_dir, label in zip(log_dirs, labels):
         steps, rewards = load_tensorboard_data(log_dir)
         if steps:
-            # Get color from map, default to cycle if not found
-            color = color_map.get(label, None)
+            # Get color from shared color map (handles both 'RecurrentPPO' and 'RECURRENTPPO')
+            color = ALGORITHM_COLORS.get(label, ALGORITHM_COLORS.get(label.upper(), None))
             plt.plot(steps, rewards, label=label, linewidth=2, alpha=0.9, color=color)
     
     plt.xlabel('Training Steps', fontsize=12)
@@ -126,14 +126,6 @@ def plot_final_performance_bar(results_dict, game, output_file):
     means = []
     stds = []
     
-    color_map = {
-        'DQN': '#1f77b4',
-        'QRDQN': '#d62728',
-        'A2C': '#ff7f0e',
-        'PPO': '#2ca02c',
-        'RECURRENTPPO': '#9467bd'
-    }
-    
     for algo in ['DQN', 'QRDQN', 'A2C', 'PPO', 'RECURRENTPPO']:
         if algo in results_dict and game in results_dict[algo]:
             algorithms.append(algo)
@@ -149,7 +141,14 @@ def plot_final_performance_bar(results_dict, game, output_file):
     sns.set_style("whitegrid")
     
     x = np.arange(len(algorithms))
-    colors = [color_map.get(algo, '#808080') for algo in algorithms]
+    # Use shared color map, handle both uppercase and camelcase variants
+    colors = []
+    for algo in algorithms:
+        color = ALGORITHM_COLORS.get(algo, None)
+        if color is None:
+            # Try uppercase variant for RecurrentPPO
+            color = ALGORITHM_COLORS.get(algo.upper() if algo == 'RecurrentPPO' else algo, '#808080')
+        colors.append(color)
     bars = plt.bar(x, means, yerr=stds, capsize=5, alpha=0.8, color=colors, edgecolor='black', linewidth=1.2)
     
     # Add value labels on bars
@@ -218,61 +217,110 @@ def plot_performance_heatmap(results_dict, output_file='results/performance_heat
 def plot_algorithm_type_comparison(results_dict, output_file='results/algorithm_type_comparison.png'):
     """
     Compare Value-based vs Policy-based algorithms.
+    Uses separate subplots for each game to handle different reward scales.
     """
     value_based = {'DQN': [], 'QRDQN': []}
     policy_based = {'A2C': [], 'PPO': [], 'RECURRENTPPO': []}
     games = ['Pong', 'BeamRider']
     
-    for game in games:
-        game_lower = game.lower()
-        for algo in value_based.keys():
-            if algo in results_dict and game_lower in results_dict[algo]:
-                mean, _ = results_dict[algo][game_lower]
-                value_based[algo].append(mean)
-            else:
-                value_based[algo].append(0)
-        
-        for algo in policy_based.keys():
-            if algo in results_dict and game_lower in results_dict[algo]:
-                mean, _ = results_dict[algo][game_lower]
-                policy_based[algo].append(mean)
-            else:
-                policy_based[algo].append(0)
+    # Collect data for each game separately
+    pong_value = {}
+    pong_policy = {}
+    beamrider_value = {}
+    beamrider_policy = {}
     
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+    for algo in value_based.keys():
+        if algo in results_dict:
+            if 'pong' in results_dict[algo]:
+                pong_value[algo] = results_dict[algo]['pong'][0]
+            if 'beamrider' in results_dict[algo]:
+                beamrider_value[algo] = results_dict[algo]['beamrider'][0]
+    
+    for algo in policy_based.keys():
+        if algo in results_dict:
+            if 'pong' in results_dict[algo]:
+                pong_policy[algo] = results_dict[algo]['pong'][0]
+            if 'beamrider' in results_dict[algo]:
+                beamrider_policy[algo] = results_dict[algo]['beamrider'][0]
+    
+    # Create 2x2 subplot: (Pong Value, Pong Policy), (BeamRider Value, BeamRider Policy)
+    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
     sns.set_style("whitegrid")
     
-    x = np.arange(len(games))
-    width = 0.15
+    width = 0.35
     
-    # Value-based algorithms
-    for i, (algo, values) in enumerate(value_based.items()):
-        offset = (i - len(value_based)/2 + 0.5) * width
-        ax1.bar(x + offset, values, width, label=algo, alpha=0.8, edgecolor='black', linewidth=1)
+    # Top row: Pong
+    # Left: Value-based for Pong
+    ax1 = axes[0, 0]
+    if pong_value:
+        x = np.arange(len(pong_value))
+        for i, (algo, value) in enumerate(pong_value.items()):
+            color = ALGORITHM_COLORS.get(algo, ALGORITHM_COLORS.get(algo.upper(), None))
+            ax1.bar(i, value, width, label=algo, alpha=0.8, color=color, edgecolor='black', linewidth=1)
+        ax1.set_xticks(x)
+        ax1.set_xticklabels(list(pong_value.keys()))
+        ax1.set_ylabel('Mean Episode Reward', fontsize=11, fontweight='bold')
+        ax1.set_title('Value-Based Algorithms - Pong', fontsize=12, fontweight='bold')
+        ax1.legend()
+        ax1.grid(True, axis='y', alpha=0.3)
+        # Add value labels on bars
+        for i, (algo, value) in enumerate(pong_value.items()):
+            ax1.text(i, value + 0.5, f'{value:.1f}', ha='center', va='bottom', fontsize=9, fontweight='bold')
     
-    ax1.set_xlabel('Game', fontsize=12, fontweight='bold')
-    ax1.set_ylabel('Mean Episode Reward', fontsize=12, fontweight='bold')
-    ax1.set_title('Value-Based Algorithms', fontsize=13, fontweight='bold')
-    ax1.set_xticks(x)
-    ax1.set_xticklabels(games)
-    ax1.legend()
-    ax1.grid(True, axis='y', alpha=0.3)
+    # Right: Policy-based for Pong
+    ax2 = axes[0, 1]
+    if pong_policy:
+        x = np.arange(len(pong_policy))
+        for i, (algo, value) in enumerate(pong_policy.items()):
+            color = ALGORITHM_COLORS.get(algo, ALGORITHM_COLORS.get(algo.upper(), None))
+            ax2.bar(i, value, width, label=algo, alpha=0.8, color=color, edgecolor='black', linewidth=1)
+        ax2.set_xticks(x)
+        ax2.set_xticklabels(list(pong_policy.keys()))
+        ax2.set_ylabel('Mean Episode Reward', fontsize=11, fontweight='bold')
+        ax2.set_title('Policy-Based Algorithms - Pong', fontsize=12, fontweight='bold')
+        ax2.legend()
+        ax2.grid(True, axis='y', alpha=0.3)
+        # Add value labels on bars
+        for i, (algo, value) in enumerate(pong_policy.items()):
+            ax2.text(i, value + 0.5, f'{value:.1f}', ha='center', va='bottom', fontsize=9, fontweight='bold')
     
-    # Policy-based algorithms
-    for i, (algo, values) in enumerate(policy_based.items()):
-        offset = (i - len(policy_based)/2 + 0.5) * width
-        ax2.bar(x + offset, values, width, label=algo, alpha=0.8, edgecolor='black', linewidth=1)
+    # Bottom row: BeamRider
+    # Left: Value-based for BeamRider
+    ax3 = axes[1, 0]
+    if beamrider_value:
+        x = np.arange(len(beamrider_value))
+        for i, (algo, value) in enumerate(beamrider_value.items()):
+            color = ALGORITHM_COLORS.get(algo, ALGORITHM_COLORS.get(algo.upper(), None))
+            ax3.bar(i, value, width, label=algo, alpha=0.8, color=color, edgecolor='black', linewidth=1)
+        ax3.set_xticks(x)
+        ax3.set_xticklabels(list(beamrider_value.keys()))
+        ax3.set_ylabel('Mean Episode Reward', fontsize=11, fontweight='bold')
+        ax3.set_title('Value-Based Algorithms - BeamRider', fontsize=12, fontweight='bold')
+        ax3.legend()
+        ax3.grid(True, axis='y', alpha=0.3)
+        # Add value labels on bars
+        for i, (algo, value) in enumerate(beamrider_value.items()):
+            ax3.text(i, value + value*0.02, f'{value:.0f}', ha='center', va='bottom', fontsize=9, fontweight='bold')
     
-    ax2.set_xlabel('Game', fontsize=12, fontweight='bold')
-    ax2.set_ylabel('Mean Episode Reward', fontsize=12, fontweight='bold')
-    ax2.set_title('Policy-Based Algorithms', fontsize=13, fontweight='bold')
-    ax2.set_xticks(x)
-    ax2.set_xticklabels(games)
-    ax2.legend()
-    ax2.grid(True, axis='y', alpha=0.3)
+    # Right: Policy-based for BeamRider
+    ax4 = axes[1, 1]
+    if beamrider_policy:
+        x = np.arange(len(beamrider_policy))
+        for i, (algo, value) in enumerate(beamrider_policy.items()):
+            color = ALGORITHM_COLORS.get(algo, ALGORITHM_COLORS.get(algo.upper(), None))
+            ax4.bar(i, value, width, label=algo, alpha=0.8, color=color, edgecolor='black', linewidth=1)
+        ax4.set_xticks(x)
+        ax4.set_xticklabels(list(beamrider_policy.keys()))
+        ax4.set_ylabel('Mean Episode Reward', fontsize=11, fontweight='bold')
+        ax4.set_title('Policy-Based Algorithms - BeamRider', fontsize=12, fontweight='bold')
+        ax4.legend()
+        ax4.grid(True, axis='y', alpha=0.3)
+        # Add value labels on bars
+        for i, (algo, value) in enumerate(beamrider_policy.items()):
+            ax4.text(i, value + value*0.02, f'{value:.0f}', ha='center', va='bottom', fontsize=9, fontweight='bold')
     
     plt.suptitle('Algorithm Type Comparison: Value-Based vs Policy-Based', 
-                 fontsize=14, fontweight='bold', y=1.02)
+                 fontsize=14, fontweight='bold', y=0.995)
     plt.tight_layout()
     
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
@@ -287,14 +335,6 @@ def plot_sample_efficiency(log_dirs, labels, game, threshold_ratios, output_file
     """
     plt.figure(figsize=(12, 6))
     sns.set_style("whitegrid")
-    
-    color_map = {
-        'DQN': '#1f77b4',
-        'QRDQN': '#d62728',
-        'A2C': '#ff7f0e',
-        'PPO': '#2ca02c',
-        'RecurrentPPO': '#9467bd'
-    }
     
     efficiency_data = {label: [] for label in labels}
     
@@ -318,7 +358,8 @@ def plot_sample_efficiency(log_dirs, labels, game, threshold_ratios, output_file
     for i, label in enumerate(labels):
         if efficiency_data[label]:
             offset = (i - len(labels)/2 + 0.5) * width
-            color = color_map.get(label, None)
+            # Use shared color map, handle both uppercase and camelcase variants
+            color = ALGORITHM_COLORS.get(label, ALGORITHM_COLORS.get(label.upper(), None))
             plt.bar(x + offset, efficiency_data[label], width, label=label, 
                    alpha=0.8, color=color, edgecolor='black', linewidth=1)
     
