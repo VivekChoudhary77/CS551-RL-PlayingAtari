@@ -144,10 +144,15 @@ def plot_final_performance_bar(results_dict, game, output_file):
     # Use shared color map, handle both uppercase and camelcase variants
     colors = []
     for algo in algorithms:
+        # Direct lookup (algo is always uppercase from line 129, and all keys exist in ALGORITHM_COLORS)
         color = ALGORITHM_COLORS.get(algo, None)
         if color is None:
-            # Try uppercase variant for RecurrentPPO
-            color = ALGORITHM_COLORS.get(algo.upper() if algo == 'RecurrentPPO' else algo, '#808080')
+            # Fallback: try camelCase variant for 'RECURRENTPPO' (shouldn't be needed, but handles edge cases)
+            if algo == 'RECURRENTPPO':
+                color = ALGORITHM_COLORS.get('RecurrentPPO', '#808080')
+            else:
+                # Fallback for any other missing keys (shouldn't happen)
+                color = '#808080'
         colors.append(color)
     bars = plt.bar(x, means, yerr=stds, capsize=5, alpha=0.8, color=colors, edgecolor='black', linewidth=1.2)
     
@@ -462,4 +467,3 @@ if __name__ == "__main__":
         if len(args.log_dirs) != len(args.labels):
             raise ValueError("Number of log directories must match number of labels")
         plot_learning_curves(args.log_dirs, args.labels, args.game, args.output)
-
