@@ -1,6 +1,6 @@
 """
 Main training script for RL Atari Project
-Supports: DQN, A2C, PPO
+Supports: DQN, QRDQN, A2C, PPO, RecurrentPPO
 Games: Pong, BeamRider
 """
 
@@ -9,6 +9,7 @@ import argparse
 import torch
 import ale_py  # Required for ALE namespace
 from stable_baselines3 import DQN, A2C, PPO
+from sb3_contrib import QRDQN, RecurrentPPO  # Additional algorithms from SB3-Contrib
 from stable_baselines3.common.atari_wrappers import AtariWrapper
 from stable_baselines3.common.vec_env import DummyVecEnv, VecFrameStack
 from stable_baselines3.common.monitor import Monitor
@@ -33,7 +34,7 @@ def train_agent(algo, game, total_timesteps, seed=0, log_dir=None, model_dir=Non
     Train an RL agent on an Atari game.
     
     Args:
-        algo: Algorithm name ('dqn', 'a2c', 'ppo')
+        algo: Algorithm name ('dqn', 'qrdqn', 'a2c', 'ppo', 'trpo')
         game: Game name ('pong', 'beamrider')
         total_timesteps: Total training steps
         seed: Random seed for reproducibility
@@ -65,19 +66,19 @@ def train_agent(algo, game, total_timesteps, seed=0, log_dir=None, model_dir=Non
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     print(f"Using device: {device}")
     
-    # Create environment (different for DQN vs A2C/PPO)
-    # DQN: Single env is fine (off-policy with replay buffer)
+    # Create environment (different for value-based vs policy-based)
+    # DQN/QRDQN: Single env is fine (off-policy with replay buffer)
     # A2C: Needs 16 parallel envs (RL Zoo standard for Atari)
-    # PPO: Needs 8 parallel envs (RL Zoo standard for Atari)
-    if algo.lower() == 'dqn':
+    # PPO/RecurrentPPO: Needs 8 parallel envs (RL Zoo standard for Atari)
+    if algo.lower() in ['dqn', 'qrdqn']:
         n_envs = 1
-        print(f"Using {n_envs} environment (DQN is off-policy, single env OK)")
+        print(f"Using {n_envs} environment ({algo.upper()} is off-policy, single env OK)")
     elif algo.lower() == 'a2c':
         n_envs = 16  # A2C needs MORE envs than PPO for variance reduction
         print(f"Using {n_envs} parallel environments (A2C needs many envs for stability)")
-    else:  # PPO
+    else:  # PPO, RecurrentPPO
         n_envs = 8
-        print(f"Using {n_envs} parallel environments (PPO with clipping reduces variance)")
+        print(f"Using {n_envs} parallel environments ({algo.upper()} is on-policy)")
     
     env = DummyVecEnv([make_atari_env(env_id, seed + i) for i in range(n_envs)])
     # Add frame stacking (critical for temporal information!)
@@ -149,6 +150,53 @@ def train_agent(algo, game, total_timesteps, seed=0, log_dir=None, model_dir=Non
             device=device
         )
     
+    elif algo.lower() == 'qrdqn':
+        # QRDQN hyperparameters (Quantile Regression DQN - Distributional RL)
+        # Similar to DQN but learns full return distribution using quantiles
+        model = QRDQN(
+            'CnnPolicy',
+            env,
+            learning_rate=1e-4,  # Lower LR for distributional learning
+            buffer_size=500_000,
+            learning_starts=10_000,
+            batch_size=32,
+            gamma=0.99,
+            train_freq=4,
+            gradient_steps=1,
+            target_update_interval=10_000,
+            exploration_fraction=0.5,
+            exploration_final_eps=0.01,
+            verbose=1,
+            tensorboard_log=log_dir,
+            seed=seed,
+            device=device
+        )
+    
+    elif algo.lower() == 'recurrentppo' or algo.lower() == 'rppo':
+        # RecurrentPPO hyperparameters (PPO with LSTM for temporal dependencies)
+        # REPLACED TRPO: TRPO has line search failures on Atari, RecurrentPPO is more stable
+        # RecurrentPPO uses LSTM to better handle temporal sequences in Atari
+        # Note: Frame stacking (VecFrameStack) is kept for consistency, though LSTM provides temporal memory
+        # With 8 parallel envs: 8 envs × 128 steps = 1024 samples per rollout
+        model = RecurrentPPO(
+            'CnnLstmPolicy',  # LSTM policy for temporal dependencies (correct policy type)
+            env,
+            learning_rate=2.5e-4,  # Same as PPO
+            n_steps=128,  # Same as PPO
+            batch_size=128,  # Reduced from 256: LSTM is memory-intensive, smaller batches help stability
+            n_epochs=4,  # Same as PPO
+            gamma=0.99,
+            gae_lambda=0.95,
+            clip_range=0.1,
+            ent_coef=0.01,
+            vf_coef=0.5,
+            max_grad_norm=0.5,
+            verbose=1,
+            tensorboard_log=log_dir,
+            seed=seed,
+            device=device
+        )
+    
     else:
         raise ValueError(f"Unknown algorithm: {algo}")
     
@@ -189,7 +237,7 @@ def train_agent(algo, game, total_timesteps, seed=0, log_dir=None, model_dir=Non
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Train RL agents on Atari games')
     parser.add_argument('--algo', type=str, required=True,
-                       choices=['dqn', 'a2c', 'ppo'],
+                       choices=['dqn', 'qrdqn', 'a2c', 'ppo', 'recurrentppo', 'rppo'],
                        help='RL algorithm to use')
     parser.add_argument('--game', type=str, required=True,
                        choices=['pong', 'beamrider'],

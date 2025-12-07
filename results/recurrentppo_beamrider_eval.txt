@@ -1,0 +1,56 @@
+/home/vickinez_077/WPI FALL 2025/RL/venvrl/lib/python3.12/site-packages/stable_baselines3/common/save_util.py:167: UserWarning: Could not deserialize object _last_obs. Consider using `custom_objects` argument to replace this object.
+Exception: _frombuffer() takes 4 positional arguments but 5 were given
+  warnings.warn(
+A.L.E: Arcade Learning Environment (version 0.11.2+ecc1138)
+[Powered by Stella]
+Loading model from: models/recurrentppo_beamrider_seed0_final.zip
+
+Evaluating on BEAMRIDER for 10 episodes...
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-0-to-step-1000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-0-to-step-1000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-0-to-step-1000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  12%|█▏        | 125/1001 [00:00<00:00, 1245.93it/s, now=None]frame_index:  25%|██▍       | 250/1001 [00:00<00:00, 1087.51it/s, now=None]frame_index:  36%|███▌      | 361/1001 [00:00<00:00, 1093.58it/s, now=None]frame_index:  48%|████▊     | 478/1001 [00:00<00:00, 1119.58it/s, now=None]frame_index:  61%|██████    | 609/1001 [00:00<00:00, 1184.85it/s, now=None]frame_index:  73%|███████▎  | 729/1001 [00:00<00:00, 1158.48it/s, now=None]frame_index:  85%|████████▍ | 846/1001 [00:00<00:00, 1158.43it/s, now=None]frame_index:  96%|█████████▌| 963/1001 [00:00<00:00, 1143.29it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-0-to-step-1000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-2000-to-step-3000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-2000-to-step-3000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-2000-to-step-3000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  13%|█▎        | 132/1001 [00:00<00:00, 1319.95it/s, now=None]frame_index:  26%|██▋       | 264/1001 [00:00<00:00, 1142.44it/s, now=None]frame_index:  38%|███▊      | 380/1001 [00:00<00:00, 1016.97it/s, now=None]frame_index:  51%|█████     | 512/1001 [00:00<00:00, 1119.62it/s, now=None]frame_index:  64%|██████▍   | 643/1001 [00:00<00:00, 1182.51it/s, now=None]frame_index:  76%|███████▋  | 764/1001 [00:00<00:00, 1162.70it/s, now=None]frame_index:  90%|████████▉ | 896/1001 [00:00<00:00, 1209.96it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-2000-to-step-3000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-4000-to-step-5000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-4000-to-step-5000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-4000-to-step-5000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  13%|█▎        | 129/1001 [00:00<00:00, 1278.44it/s, now=None]frame_index:  26%|██▌       | 257/1001 [00:00<00:00, 1268.57it/s, now=None]frame_index:  38%|███▊      | 385/1001 [00:00<00:00, 1272.06it/s, now=None]frame_index:  52%|█████▏    | 517/1001 [00:00<00:00, 1287.45it/s, now=None]frame_index:  65%|██████▍   | 648/1001 [00:00<00:00, 1293.96it/s, now=None]frame_index:  78%|███████▊  | 779/1001 [00:00<00:00, 1297.11it/s, now=None]frame_index:  91%|█████████ | 909/1001 [00:00<00:00, 1294.08it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-4000-to-step-5000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-6000-to-step-7000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-6000-to-step-7000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-6000-to-step-7000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  13%|█▎        | 131/1001 [00:00<00:00, 1300.38it/s, now=None]frame_index:  26%|██▌       | 262/1001 [00:00<00:00, 1241.39it/s, now=None]frame_index:  39%|███▉      | 390/1001 [00:00<00:00, 1255.57it/s, now=None]frame_index:  53%|█████▎    | 526/1001 [00:00<00:00, 1294.46it/s, now=None]frame_index:  66%|██████▌   | 660/1001 [00:00<00:00, 1309.40it/s, now=None]frame_index:  79%|███████▉  | 792/1001 [00:00<00:00, 1304.04it/s, now=None]frame_index:  92%|█████████▏| 924/1001 [00:00<00:00, 1308.19it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-6000-to-step-7000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-8000-to-step-9000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-8000-to-step-9000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-8000-to-step-9000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  15%|█▍        | 146/1001 [00:00<00:00, 1458.30it/s, now=None]frame_index:  29%|██▉       | 292/1001 [00:00<00:00, 1301.74it/s, now=None]frame_index:  42%|████▏     | 424/1001 [00:00<00:00, 1239.28it/s, now=None]frame_index:  56%|█████▌    | 561/1001 [00:00<00:00, 1286.54it/s, now=None]frame_index:  69%|██████▉   | 691/1001 [00:00<00:00, 1211.00it/s, now=None]frame_index:  82%|████████▏ | 821/1001 [00:00<00:00, 1236.48it/s, now=None]frame_index:  95%|█████████▍| 946/1001 [00:00<00:00, 1231.51it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-8000-to-step-9000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-10000-to-step-11000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-10000-to-step-11000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-10000-to-step-11000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  13%|█▎        | 135/1001 [00:00<00:00, 1346.63it/s, now=None]frame_index:  27%|██▋       | 270/1001 [00:00<00:00, 1273.93it/s, now=None]frame_index:  40%|███▉      | 398/1001 [00:00<00:00, 1251.12it/s, now=None]frame_index:  53%|█████▎    | 528/1001 [00:00<00:00, 1269.36it/s, now=None]frame_index:  66%|██████▌   | 656/1001 [00:00<00:00, 1259.93it/s, now=None]frame_index:  78%|███████▊  | 783/1001 [00:00<00:00, 1044.97it/s, now=None]frame_index:  89%|████████▉ | 893/1001 [00:00<00:00, 924.60it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-10000-to-step-11000.mp4
+
+============================================================
+Results for recurrentppo_beamrider_seed0_final.zip
+Game: BEAMRIDER
+Mean reward: 400.40 +/- 135.55
+============================================================
+
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-12000-to-step-13000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-12000-to-step-13000.mp4
+
+frame_index:   0%|          | 0/687 [00:00<?, ?it/s, now=None]frame_index:  21%|██        | 142/687 [00:00<00:00, 1416.75it/s, now=None]frame_index:  41%|████▏     | 284/687 [00:00<00:00, 1111.08it/s, now=None]frame_index:  58%|█████▊    | 400/687 [00:00<00:00, 1114.56it/s, now=None]frame_index:  75%|███████▌  | 516/687 [00:00<00:00, 1126.19it/s, now=None]frame_index:  92%|█████████▏| 631/687 [00:00<00:00, 1076.12it/s, now=None]                                                                          MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_beamrider_seed0_final-step-12000-to-step-13000.mp4

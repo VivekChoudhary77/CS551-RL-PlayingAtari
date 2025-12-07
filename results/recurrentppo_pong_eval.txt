@@ -1,0 +1,74 @@
+/home/vickinez_077/WPI FALL 2025/RL/venvrl/lib/python3.12/site-packages/stable_baselines3/common/save_util.py:167: UserWarning: Could not deserialize object _last_obs. Consider using `custom_objects` argument to replace this object.
+Exception: _frombuffer() takes 4 positional arguments but 5 were given
+  warnings.warn(
+A.L.E: Arcade Learning Environment (version 0.11.2+ecc1138)
+[Powered by Stella]
+Loading model from: models/recurrentppo_pong_seed0_final.zip
+
+Evaluating on PONG for 10 episodes...
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-0-to-step-1000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-0-to-step-1000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-0-to-step-1000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  16%|█▌        | 159/1001 [00:00<00:00, 1579.45it/s, now=None]frame_index:  32%|███▏      | 317/1001 [00:00<00:00, 1546.17it/s, now=None]frame_index:  47%|████▋     | 472/1001 [00:00<00:00, 1517.40it/s, now=None]frame_index:  62%|██████▏   | 624/1001 [00:00<00:00, 1458.33it/s, now=None]frame_index:  77%|███████▋  | 771/1001 [00:00<00:00, 1443.05it/s, now=None]frame_index:  92%|█████████▏| 916/1001 [00:00<00:00, 1420.47it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-0-to-step-1000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-2000-to-step-3000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-2000-to-step-3000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-2000-to-step-3000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  15%|█▌        | 153/1001 [00:00<00:00, 1529.43it/s, now=None]frame_index:  31%|███       | 306/1001 [00:00<00:00, 1516.75it/s, now=None]frame_index:  46%|████▌     | 458/1001 [00:00<00:00, 1497.83it/s, now=None]frame_index:  61%|██████    | 608/1001 [00:00<00:00, 1458.78it/s, now=None]frame_index:  75%|███████▌  | 755/1001 [00:00<00:00, 1201.71it/s, now=None]frame_index:  88%|████████▊ | 882/1001 [00:00<00:00, 1036.42it/s, now=None]frame_index:  99%|█████████▉| 993/1001 [00:00<00:00, 946.38it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-2000-to-step-3000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-4000-to-step-5000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-4000-to-step-5000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-4000-to-step-5000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  15%|█▌        | 153/1001 [00:00<00:00, 1528.78it/s, now=None]frame_index:  31%|███       | 306/1001 [00:00<00:00, 1447.74it/s, now=None]frame_index:  45%|████▌     | 452/1001 [00:00<00:00, 1398.18it/s, now=None]frame_index:  59%|█████▉    | 593/1001 [00:00<00:00, 1370.69it/s, now=None]frame_index:  73%|███████▎  | 731/1001 [00:00<00:00, 1364.22it/s, now=None]frame_index:  87%|████████▋ | 868/1001 [00:00<00:00, 1341.36it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-4000-to-step-5000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-6000-to-step-7000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-6000-to-step-7000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-6000-to-step-7000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  14%|█▎        | 137/1001 [00:00<00:00, 1369.89it/s, now=None]frame_index:  27%|██▋       | 274/1001 [00:00<00:00, 1323.71it/s, now=None]frame_index:  41%|████      | 407/1001 [00:00<00:00, 1255.38it/s, now=None]frame_index:  53%|█████▎    | 533/1001 [00:00<00:00, 1251.82it/s, now=None]frame_index:  66%|██████▌   | 659/1001 [00:00<00:00, 1235.35it/s, now=None]frame_index:  78%|███████▊  | 783/1001 [00:00<00:00, 1208.57it/s, now=None]frame_index:  90%|█████████ | 905/1001 [00:00<00:00, 1209.13it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-6000-to-step-7000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-8000-to-step-9000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-8000-to-step-9000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-8000-to-step-9000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  15%|█▌        | 151/1001 [00:00<00:00, 1503.02it/s, now=None]frame_index:  30%|███       | 302/1001 [00:00<00:00, 1398.75it/s, now=None]frame_index:  44%|████▍     | 443/1001 [00:00<00:00, 1388.21it/s, now=None]frame_index:  58%|█████▊    | 583/1001 [00:00<00:00, 1375.62it/s, now=None]frame_index:  72%|███████▏  | 722/1001 [00:00<00:00, 1380.45it/s, now=None]frame_index:  86%|████████▌ | 861/1001 [00:00<00:00, 1373.08it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-8000-to-step-9000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-10000-to-step-11000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-10000-to-step-11000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-10000-to-step-11000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  14%|█▍        | 144/1001 [00:00<00:00, 1437.69it/s, now=None]frame_index:  29%|██▉       | 288/1001 [00:00<00:00, 1412.30it/s, now=None]frame_index:  43%|████▎     | 430/1001 [00:00<00:00, 1407.82it/s, now=None]frame_index:  57%|█████▋    | 571/1001 [00:00<00:00, 1408.55it/s, now=None]frame_index:  71%|███████   | 713/1001 [00:00<00:00, 1411.35it/s, now=None]frame_index:  85%|████████▌ | 855/1001 [00:00<00:00, 1397.88it/s, now=None]frame_index:  99%|█████████▉| 995/1001 [00:00<00:00, 1228.72it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-10000-to-step-11000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-12000-to-step-13000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-12000-to-step-13000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-12000-to-step-13000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  14%|█▍        | 143/1001 [00:00<00:00, 1419.11it/s, now=None]frame_index:  28%|██▊       | 285/1001 [00:00<00:00, 1376.31it/s, now=None]frame_index:  43%|████▎     | 427/1001 [00:00<00:00, 1393.01it/s, now=None]frame_index:  57%|█████▋    | 567/1001 [00:00<00:00, 1395.39it/s, now=None]frame_index:  71%|███████   | 707/1001 [00:00<00:00, 1345.09it/s, now=None]frame_index:  84%|████████▍ | 842/1001 [00:00<00:00, 1344.20it/s, now=None]frame_index:  98%|█████████▊| 978/1001 [00:00<00:00, 1347.68it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-12000-to-step-13000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-14000-to-step-15000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-14000-to-step-15000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-14000-to-step-15000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  15%|█▌        | 152/1001 [00:00<00:00, 1512.66it/s, now=None]frame_index:  30%|███       | 304/1001 [00:00<00:00, 1412.28it/s, now=None]frame_index:  45%|████▍     | 446/1001 [00:00<00:00, 1402.86it/s, now=None]frame_index:  59%|█████▊    | 587/1001 [00:00<00:00, 1398.59it/s, now=None]frame_index:  73%|███████▎  | 727/1001 [00:00<00:00, 1369.94it/s, now=None]frame_index:  86%|████████▋ | 865/1001 [00:00<00:00, 1352.08it/s, now=None]frame_index: 100%|██████████| 1001/1001 [00:00<00:00, 1337.92it/s, now=None]                                                                            MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-14000-to-step-15000.mp4
+Saving video to /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-16000-to-step-17000.mp4
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-16000-to-step-17000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-16000-to-step-17000.mp4
+
+frame_index:   0%|          | 0/1001 [00:00<?, ?it/s, now=None]frame_index:  16%|█▌        | 156/1001 [00:00<00:00, 1559.59it/s, now=None]frame_index:  31%|███       | 312/1001 [00:00<00:00, 1448.76it/s, now=None]frame_index:  46%|████▌     | 458/1001 [00:00<00:00, 1420.90it/s, now=None]frame_index:  60%|██████    | 601/1001 [00:00<00:00, 1391.58it/s, now=None]frame_index:  74%|███████▍  | 741/1001 [00:00<00:00, 1382.68it/s, now=None]frame_index:  88%|████████▊ | 880/1001 [00:00<00:00, 1299.45it/s, now=None]                                                                           MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-16000-to-step-17000.mp4
+
+============================================================
+Results for recurrentppo_pong_seed0_final.zip
+Game: PONG
+Mean reward: 19.80 +/- 0.87
+============================================================
+
+MoviePy - Building video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-18000-to-step-19000.mp4.
+MoviePy - Writing video /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-18000-to-step-19000.mp4
+
+frame_index:   0%|          | 0/736 [00:00<?, ?it/s, now=None]frame_index:  22%|██▏       | 161/736 [00:00<00:00, 1609.67it/s, now=None]frame_index:  44%|████▍     | 322/736 [00:00<00:00, 1586.33it/s, now=None]frame_index:  65%|██████▌   | 481/736 [00:00<00:00, 1548.01it/s, now=None]frame_index:  86%|████████▋ | 636/736 [00:00<00:00, 1539.68it/s, now=None]                                                                          MoviePy - Done !
+MoviePy - video ready /home/vickinez_077/WPI FALL 2025/RL/CS551-RL-PlayingAtari/videos/eval_recurrentppo_pong_seed0_final-step-18000-to-step-19000.mp4

@@ -8,6 +8,7 @@ import argparse
 import numpy as np
 import ale_py  # Required for ALE namespace
 from stable_baselines3 import DQN, A2C, PPO
+from sb3_contrib import QRDQN, RecurrentPPO  # Additional algorithms from SB3-Contrib
 from stable_baselines3.common.atari_wrappers import AtariWrapper
 from stable_baselines3.common.vec_env import DummyVecEnv, VecVideoRecorder, VecFrameStack
 from stable_baselines3.common.monitor import Monitor
@@ -50,7 +51,13 @@ def evaluate_agent(model_path, game, n_eval_episodes=10, record_video=True, vide
     env_id = game_mapping[game.lower()]
     
     # Determine algorithm from model path
-    if 'dqn' in model_path.lower():
+    # Check for qrdqn BEFORE dqn (since 'dqn' is substring of 'qrdqn')
+    # Check for recurrentppo/rppo BEFORE ppo (since 'ppo' is substring)
+    if 'qrdqn' in model_path.lower():
+        Model = QRDQN
+    elif 'recurrentppo' in model_path.lower() or 'rppo' in model_path.lower():
+        Model = RecurrentPPO
+    elif 'dqn' in model_path.lower():
         Model = DQN
     elif 'a2c' in model_path.lower():
         Model = A2C
