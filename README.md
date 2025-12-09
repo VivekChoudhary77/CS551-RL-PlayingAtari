@@ -54,43 +54,43 @@ Value-based methods significantly outperformed policy-based methods on the more 
 
 #### Value-Based Algorithms
 
-**DQN on Pong**
-![DQN Pong](images/DQN_PONG_vid_res.png)
-
-**QRDQN on Pong**
-![QRDQN Pong](images/QRDQN_pong_vid_res.png)
+<table>
+<tr>
+<td align="center"><b>DQN</b><br><img src="images/DQN_PONG_vid_res.png" width="300" height="200"></td>
+<td align="center"><b>QRDQN</b><br><img src="images/QRDQN_pong_vid_res.png" width="300" height="200"></td>
+</tr>
+</table>
 
 #### Policy-Based Algorithms
 
-**A2C on Pong**
-![A2C Pong](images/A2C_pong_vid_res.png)
-
-**PPO on Pong**
-![PPO Pong](images/PPO_pong_vid_res.png)
-
-**RecurrentPPO on Pong**
-![RecurrentPPO Pong](images/RecurrentPPO_pong_vid_res.png)
+<table>
+<tr>
+<td align="center"><b>A2C</b><br><img src="images/A2C_pong_vid_res.png" width="300" height="200"></td>
+<td align="center"><b>PPO</b><br><img src="images/PPO_pong_vid_res.png" width="300" height="200"></td>
+<td align="center"><b>RecurrentPPO</b><br><img src="images/RecurrentPPO_pong_vid_res.png" width="300" height="200"></td>
+</tr>
+</table>
 
 ### BeamRider Gameplay
 
 #### Value-Based Algorithms
 
-**DQN on BeamRider**
-![DQN BeamRider](images/DQN_beamrider_vid_res.png)
-
-**QRDQN on BeamRider**
-![QRDQN BeamRider](images/QRDQN_beamrider_vid_res.png)
+<table>
+<tr>
+<td align="center"><b>DQN</b><br><img src="images/DQN_beamrider_vid_res.png" width="300" height="200"></td>
+<td align="center"><b>QRDQN</b><br><img src="images/QRDQN_beamrider_vid_res.png" width="300" height="200"></td>
+</tr>
+</table>
 
 #### Policy-Based Algorithms
 
-**A2C on BeamRider**
-![A2C BeamRider](images/A2C_beamrider_vid_res.png)
-
-**PPO on BeamRider**
-![PPO BeamRider](images/PPO_beamrider_vid_res.png)
-
-**RecurrentPPO on BeamRider**
-![RecurrentPPO BeamRider](images/RecurrentPPO_beamrider_vid_res.png)
+<table>
+<tr>
+<td align="center"><b>A2C</b><br><img src="images/A2C_beamrider_vid_res.png" width="300" height="200"></td>
+<td align="center"><b>PPO</b><br><img src="images/PPO_beamrider_vid_res.png" width="300" height="200"></td>
+<td align="center"><b>RecurrentPPO</b><br><img src="images/RecurrentPPO_beamrider_vid_res.png" width="300" height="200"></td>
+</tr>
+</table>
 
 ## 📁 Project Structure
 
